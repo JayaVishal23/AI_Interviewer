@@ -1,0 +1,110 @@
+.interview-page {
+  /* width: 95%; */
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 30px;
+  margin-top: 1%;
+  /* margin-bottom: 1%; */
+}
+
+.cam-box {
+  width: 100%;
+  margin-left: 2.5%;
+  background-color: black;
+  padding-right: 2.5%;
+}
+
+.chat-box {
+  background-color: aliceblue;
+  /* background-color: #01d636; */
+  /* background-color: #00ff40; */
+  /* #040A10 */
+  /* #004C13 */
+  display: flex;
+  flex-direction: column;
+  margin-right: 2.5%;
+  width: 97.5%;
+  height: 88vh;
+}
+
+.chat-header {
+  background-color: #004c13;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 26px;
+}
+
+.chat-body {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 85%;
+  width: 100%;
+  padding: 10px;
+}
+.chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat-inp {
+  padding: 10px;
+  width: 70%;
+  font-size: 0.9rem;
+}
+.chat-foot-start {
+  background-color: #01d636;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+}
+.chat-foot-send {
+  background-color: #01d636;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.message {
+  background-color: #004c13;
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 60%;
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.ai {
+  align-self: flex-start;
+}
+.webcam {
+  /* width: 800px; */
+  height: 88vh;
+  width: 100%;
+}
+.mic-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}

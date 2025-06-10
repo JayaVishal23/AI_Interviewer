@@ -1,0 +1,106 @@
+.home {
+  color: #2b2b2b;
+}
+.drag-drop {
+  width: 100%;
+  border: 2px dashed rgba(0, 0, 255, 0.723);
+  height: 50vh;
+  background-color: #f0faff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.dropzone-file:hover {
+  border-color: blue;
+  background-color: #e6f2ff;
+}
+
+.dropzone-file p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.drag-svg {
+  opacity: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.job-details {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  margin-top: 30px;
+}
+
+.name-inp {
+  font-size: 16px;
+  padding: 10px 6px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 70%;
+  background-color: #f0faff;
+}
+
+.name-inp:focus {
+  outline: none;
+}
+.job-details-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.inp-sec {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.text-inp {
+  font-size: 20px;
+}
+
+.job-des {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 6px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #f0faff;
+  margin-bottom: 20px;
+}
+.job-des:focus {
+  outline: none;
+}
+
+.job-descrip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 50%;
+  margin-left: 25%;
+  padding: 12px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #00ff40;
+  color: #2b2b2b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
