@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import rateLimit from "express-rate-limit";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { verifyToken } from "../middleware/protectRoute.js";
 
 dotenv.config();
 
@@ -48,7 +49,7 @@ router.post("/login", limiter, async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
       maxAge: 60 * 60 * 1000,
     });
 
@@ -103,6 +104,10 @@ router.post("/signup", async (req, res) => {
 router.get("/logout", (req, res) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Logged out successfully" });
+});
+
+router.get("/verify", verifyToken, (req, res) => {
+  res.status(200).json({ message: "User is authenticated", user: req.user });
 });
 
 export default router;

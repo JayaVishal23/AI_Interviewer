@@ -18,9 +18,17 @@ const interviewSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    conversation: {
-      type: String,
-    },
+    conversation: [
+      {
+        role: {
+          type: String,
+          enum: ["user", "model"],
+        },
+        message: {
+          type: String,
+        },
+      },
+    ],
     feedback: {
       type: String,
     },

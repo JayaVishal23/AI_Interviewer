@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CSS/login.css";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -16,6 +16,11 @@ const Login = () => {
   const [login, setLogin] = useState(true);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await submitData();
+  };
 
   const forgotPassClick = () => {
     toast.error("Can't you remember your password?? Create new account man!!");
@@ -84,7 +89,7 @@ const Login = () => {
     <div className="container cont-login">
       <div className="login-page">
         <h1 className="main-head">AI Interview</h1>
-        <div className="login-form">
+        <form onSubmit={handleLogin} className="login-form">
           {login ? (
             <p className="login-head">Login</p>
           ) : (
@@ -140,9 +145,7 @@ const Login = () => {
             Show password
           </span>
 
-          <button className="login-btn" onClick={submitData}>
-            {login ? "Login" : "Signup"}
-          </button>
+          <button className="login-btn">{login ? "Login" : "Signup"}</button>
           <span className="sinup-link" onClick={setLoginSignup}>
             {login ? (
               <p>Or new to AI Interview? - Signup</p>
@@ -155,7 +158,7 @@ const Login = () => {
               Forgot password?
             </span>
           )}
-        </div>
+        </form>
       </div>
     </div>
   );

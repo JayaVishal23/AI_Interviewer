@@ -61,7 +61,7 @@ function Dragordrop({ setfile }) {
         ) : filename ? (
           <p>FileName: {filename}</p>
         ) : (
-          <p>Choose a file Or Drag it here</p>
+          <p>Upload Resume</p>
         )}
       </div>
     </div>
